@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Seasoned Spoon</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="logo">
+          <a href="#"></a>
+          <img src="logo.png" alt="The Seasoned Spoon Logo" />
+        </div>
+        <nav class="nav">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#popular-recipes">Recipes</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+        <div class="search-bar">
+          <input type="text" placeholder="Search recipes..." />
+          <button>Search</button>
+        </div>
+      </div>
+    </header>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Discover the Taste of Every Season</h1>
+        <p>From healthy delights to indulgent treats, we've got it all!</p>
+        <div class="hero-buttons">
+          <a href="#" class="btn">Browse Recipes</a>
+          <a href="#" class="btn btn-secondary">Submit Your Recipe</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured-categories">
+      <h2>Explore Categories</h2>
+      <div class="categories-container">
+        <div class="category-card" id="vegetarian-btn">
+          <img src="veg.png" alt="Vegetarian" />
+          <h3>Vegetarian</h3>
+        </div>
+        <div class="category-card" id="non-veg-btn">
+          <img src="non-veg.png" alt="Non-Vegetarian" />
+          <h3>Non-Vegetarian</h3>
+        </div>
+        <div class="category-card" id="desserts-btn">
+          <img src="desserts.png" alt="Desserts" />
+          <h3>Desserts</h3>
+        </div>
+        <div class="category-card" id="healthy-btn">
+          <img src="cake.png" alt="Healthy" />
+          <h3>Healthy Options</h3>
+        </div>
+        <div class="category-card" id="starters-btn">
+          <img src="starters.png" alt="Starters" />
+          <h3>Starters</h3>
+        </div>
+        <div class="category-card" id="main-course-btn">
+          <img src="main-course.png" alt="Main Course" />
+          <h3>Main Course</h3>
+        </div>
+      </div>
+    </section>
+    <!-- Vegetarian  -->
+    <section id="vegetarian-section" class="split-screen" style="display: none">
+      <span id="veg-close" class="close-cross">&times;</span>
+      <!-- Left Panel: Recipe List -->
+      <div class="left-panel">
+        <h2 class="recipe-title">Vegetarian Recipes</h2>
+        <ul class="recipe-list">
+          <li data-recipe="paneer">Paneer Butter Masala</li>
+          <li data-recipe="rajma">Rajma Masala</li>
+          <li data-recipe="missi">Missi Roti</li>
+          <li data-recipe="bhindi">Bhindi Masala (Okra Masala)</li>
+          <li data-recipe="palak">Palak Paneer (Spinach and Cottage Cheese)</li>
+        </ul>
+      </div>
+
+      <!-- Right Panel: Recipe Image -->
+      <div class="right-panel">
+        <img id="recipe-image" src="paneer.png" alt="Select a Recipe" />
+      </div>
+    </section>
+
+    <!-- Non-Vegetarian Section -->
+    <section id="non-veg-section" class="split-screen" style="display: none">
+      <span id="non-veg-close" class="close-cross">&times;</span>
+      <div class="left-panel">
+        <h2>Non-Vegetarian Recipes</h2>
+        <ul class="recipe-list non-veg-list">
+          <li data-recipe="chicken">Butter Chicken</li>
+          <li data-recipe="fish">Fish Curry</li>
+          <li data-recipe="mutton">Mutton Rogan Josh</li>
+          <li data-recipe="egg">Egg Curry</li>
+          <li data-recipe="prawns">Prawns Masala</li>
+        </ul>
+      </div>
+      <div class="right-panel">
+        <img
+          id="non-veg-image"
+          src="butter chicken.png"
+          alt="Select a Recipe"
+        />
+      </div>
+    </section>
+
+    <!-- Desserts Section -->
+    <section id="desserts-section" class="split-screen" style="display: none">
+      <span id="desserts-close" class="close-cross">&times;</span>
+      <div class="left-panel">
+        <h2>Desserts</h2>
+        <ul class="recipe-list desserts-list">
+          <li data-recipe="cake">Chocolate Fudge Cake</li>
+          <li data-recipe="icecream">Vanilla Ice Cream</li>
+          <li data-recipe="gulabJamun">Gulab Jamun</li>
+          <li data-recipe="pudding">Strawberry Cake</li>
+          <li data-recipe="pastry">Chocolate Cookies</li>
+        </ul>
+      </div>
+      <div class="right-panel">
+        <img id="desserts-image" src="cake.jpg" alt="Select a Recipe" />
+      </div>
+    </section>
+
+    <!-- Healthy Options Section -->
+    <section id="healthy-section" class="split-screen" style="display: none">
+      <span id="healthy-close" class="close-cross">&times;</span>
+      <div class="left-panel">
+        <h2>Healthy Options</h2>
+        <ul class="recipe-list healthy-list">
+          <li data-recipe="salad">Fresh Summer Salad</li>
+          <li data-recipe="smoothie">Fruit Smoothie</li>
+          <li data-recipe="oats">Oats Porridge</li>
+          <li data-recipe="soup">Vegetable Soup</li>
+          <li data-recipe="quinoa">Quinoa Bowl</li>
+        </ul>
+      </div>
+      <div class="right-panel">
+        <img id="healthy-image" src="fresh summer2.png" alt="Select a Recipe" />
+      </div>
+    </section>
+
+    <!-- Starters Section -->
+    <section id="starters-section" class="split-screen" style="display: none">
+      <span id="starters-close" class="close-cross">&times;</span>
+      <div class="left-panel">
+        <h2>Starters</h2>
+        <ul class="recipe-list starters-list">
+          <li data-recipe="samosa">Samosa</li>
+          <li data-recipe="springRoll">Spring Roll</li>
+          <li data-recipe="kebab">Kebab</li>
+          <li data-recipe="bruschetta">Bruschetta</li>
+          <li data-recipe="nachos">Cheese Ball</li>
+        </ul>
+      </div>
+      <div class="right-panel">
+        <img id="starters-image" src="samosa2.png" alt="Select a Recipe" />
+      </div>
+    </section>
+
+    <!-- Main Course Section -->
+    <section
+      id="main-course-section"
+      class="split-screen"
+      style="display: none"
+    >
+      <span id="main-course-close" class="close-cross">&times;</span>
+      <div class="left-panel">
+        <h2>Main Course</h2>
+        <ul class="recipe-list main-course-list">
+          <li data-recipe="biryani">Chicken Biryani</li>
+          <li data-recipe="pizza">Pizza</li>
+          <li data-recipe="lasagna">Lasagna</li>
+          <li data-recipe="curry">Vegetable Curry</li>
+        </ul>
+      </div>
+      <div class="right-panel">
+        <img id="main-course-image" src="biryani.png" alt="Select a Recipe" />
+      </div>
+    </section>
+    <section id="popular-recipes" class="popular-recipes">
+      <h2>Popular Recipes</h2>
+      <div class="recipes-container">
+        <!-- Recipe Card 1 -->
+        <div class="recipe-card">
+          <img src="creamy garlic pasta.png" alt="Creamy Garlic Pasta" />
+          <div class="recipe-info">
+            <h3>Creamy Garlic Pasta</h3>
+            <p>
+              A rich and creamy pasta dish with a perfect blend of garlic and
+              cheese.
+            </p>
+            <button class="btn view-recipe-btn" data-recipe="pasta">
+              View Recipe
+            </button>
+          </div>
+        </div>
+        <!-- Recipe Card 2 -->
+        <div class="recipe-card">
+          <img src="choclate brownie.png" alt="Chocolate Brownie" />
+          <div class="recipe-info">
+            <h3>Chocolate Brownie</h3>
+            <p>Decadent, fudgy brownies for every chocolate lover.</p>
+            <button class="btn view-recipe-btn" data-recipe="brownie">
+              View Recipe
+            </button>
+          </div>
+        </div>
+        <!-- Recipe Card 3 -->
+        <div class="recipe-card">
+          <img src="fresh garden salad.png" alt="Fresh Garden Salad" />
+          <div class="recipe-info">
+            <h3>Fresh Garden Salad</h3>
+            <p>
+              A healthy mix of fresh greens, crunchy vegetables, and a light
+              dressing.
+            </p>
+            <button class="btn view-recipe-btn" data-recipe="salad">
+              View Recipe
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recipe Modal -->
+      <div id="recipe-modal" class="modal hidden">
+        <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <div id="modal-recipe-content"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about-us">
+      <div class="about-content">
+        <div class="about-text">
+          <h2>About Us</h2>
+          <p>
+            Welcome to <b>The Seasoned Spoon</b>, your ultimate destination for
+            discovering mouthwatering recipes from around the globe. Our mission
+            is to inspire home cooks, food enthusiasts, and chefs to explore new
+            flavors, create memorable meals, and celebrate the joy of cooking.
+          </p>
+          <p>
+            Whether you're a beginner or a seasoned chef, our recipes are
+            designed to be accessible, delicious, and crafted with love. Join us
+            on a culinary journey to savor the essence of every cuisine!
+          </p>
+          <a href="#contact" class="btn">Contact Us</a>
+        </div>
+        <div class="about-image">
+          <img src="about us.png" alt="About Us" />
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="cta">
+      <div class="cta-content">
+        <h2>Ready to Cook? Join Us Today!</h2>
+        <p>
+          Get access to exclusive recipes, cooking tips, and more. Sign up now
+          and start cooking your favorites!
+        </p>
+        <a href="#signup" class="btn cta-btn">Sign Up Now</a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-about">
+          <h3>The Seasoned Spoon</h3>
+          <p>
+            Your go-to source for discovering delicious recipes from around the
+            world. Join us and start your culinary journey today!
+          </p>
+        </div>
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Recipes</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h3>Follow Us</h3>
+          <ul>
+            <li>
+              <a href="#" target="_blank"
+                ><i class="fab fa-facebook-f"></i> Facebook</a
+              >
+            </li>
+            <li>
+              <a href="#" target="_blank"
+                ><i class="fab fa-twitter"></i> Twitter</a
+              >
+            </li>
+            <li>
+              <a href="#" target="_blank"
+                ><i class="fab fa-instagram"></i> Instagram</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 The Seasoned Spoon. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
